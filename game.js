@@ -118,6 +118,7 @@ function checklevel(count){
         document.getElementById('wordplace').style.fontSize="40px";
         document.getElementById('wordplace').style.color = "gold";
         document.getElementById('wordplace').style.backgroundColor="#1C1B21";
+        localStorage.removeItem("level");
         return;
         }
         localStorage.setItem("level",level);
