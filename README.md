@@ -1,2 +1,0 @@
-# wordgame
-js game

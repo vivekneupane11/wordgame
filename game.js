@@ -55,6 +55,7 @@ function makeboard(){
       
             for(j=1;j<=data.length;j++){
                 document.getElementById(`${i+1}${j}`).style.display = "block";
+           
                 let letter = data.split('')[j-1];
                 arr.push(i+1+''+j,{letter});
             }
@@ -81,6 +82,7 @@ function getuserdata(index){
                             document.getElementById(`${e}`).innerHTML = wordbox[i-1][index+1].letter;
                             document.getElementById(`${e}`).style.color="gold";
                             document.getElementById(`${e}`).style.backgroundColor="#1C1B21";
+  document.getElementById(`${e}`).style.transition = "0.5s all ease-in-out";
                         }
                    
                     });
@@ -118,6 +120,7 @@ function checklevel(count){
         document.getElementById('wordplace').style.fontSize="40px";
         document.getElementById('wordplace').style.color = "gold";
         document.getElementById('wordplace').style.backgroundColor="#1C1B21";
+        localStorage.removeItem("level");
         return;
         }
         localStorage.setItem("level",level);
